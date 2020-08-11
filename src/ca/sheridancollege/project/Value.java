@@ -1,5 +1,5 @@
 package ca.sheridancollege.project;
-
+//enum for the value of the card
 public enum Value {
 	ACE,
 	TWO,
