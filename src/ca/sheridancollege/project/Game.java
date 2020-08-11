@@ -12,12 +12,14 @@ import java.util.Scanner;
  * The class that models your game. You should create a more specific
  * child of this class and instantiate the methods given.
  * @author dancye, 2018
+ * @modifield by Andrew Pereira,2020
  */
 public class Game 
 {
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
     
+    /***/
     public Game(String givenName)
     {
         gameName = givenName;

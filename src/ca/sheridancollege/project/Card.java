@@ -5,6 +5,11 @@ package ca.sheridancollege.project;
  * enough to be instantiated for any Card game. Students wishing to add to the code
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
+ * @modifield by Andrew Pereira,2020
+ */
+
+/**
+ *class to create cards of 4 different suits and each having 13 cards in it 
  */
 public class Card {
 
@@ -21,7 +26,7 @@ public class Card {
 
         /**
          * 
-         * @return this.suit
+         * @return this.suit -suit of the card 
          */
 	public Suit getSuit() {
 		return this.suit;
@@ -29,7 +34,7 @@ public class Card {
 
         /**
          * 
-         * @param suit 
+         * @param suit -suit of the card
          */
 	public void setSuit(Suit suit) {
 		this.suit = suit;
@@ -37,7 +42,7 @@ public class Card {
 
         /**
          * 
-         * @return this.value
+         * @return this.value -value of the card
          */
 	public Value getValue() {
 		return this.value;
@@ -45,7 +50,7 @@ public class Card {
 
         /**
          * 
-         * @param value 
+         * @param value -value of the card
          */
 	public void setValue(Value value) {
 		this.value = value;
@@ -53,67 +58,19 @@ public class Card {
 
 	/**
 	 * Students should implement this method for their specific children classes
-	 * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+	 * @return a String representation of a card. suits and values of the cards  
 	 */
 	@Override()
 	public String toString(){
             return " Value : " + value + " Suit: " + suit;
         }
 
-        /*
-	public int getRank() {
-		// TODO - implement Card.getRank
-		//throw new UnsupportedOperationException();
-                int rankNum = 0;
-                switch(this.value){
-                        case TWO:
-                        rankNum = 1;
-                        break;
-                        case THREE:
-                        rankNum = 2;
-                        break;
-                        case FOUR:
-                        rankNum = 3;
-                        break;
-                        case FIVE:
-                        rankNum = 4;
-                        break;
-                        case SIX:
-                        rankNum = 5;
-                        break;
-                        case SEVEN:
-                        rankNum = 6;
-                        break;
-                        case EIGHT:
-                        rankNum = 7;
-                        break;
-                        case NINE:
-                        rankNum = 8;
-                        break;
-                        case TEN:
-                        rankNum = 9;
-                        break;
-                        case JACK:
-                        rankNum = 10;
-                        break;
-                        case QUEEN:
-                        rankNum = 11;
-                        break;
-                        case KING:
-                        rankNum = 12;
-                        break;
-                        case ACE:
-                        rankNum = 13;
-                        break;
-                }
-                return rankNum;
-	}
-        */
+        
 
 	/**
 	 * 
-	 * @param s
-	 * @param v
+	 * @param s :Suits - the suit of the card
+	 * @param v :value - the value of the  card
 	 */
 	public Card(Suit s, Value v) {
 		// TODO - implement Card.Card
