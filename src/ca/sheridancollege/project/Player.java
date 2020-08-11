@@ -8,10 +8,12 @@ package ca.sheridancollege.project;
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
  * @author dancye, 2018
+ * @modifield by Andrew Pereira,2020
  */
 public class Player extends WarPlayer
 {
-    private String playerID; //the unique ID for this player
+    //the unique ID for this player
+    private String playerID; 
    
     
     /**
@@ -24,6 +26,7 @@ public class Player extends WarPlayer
     }
     
     /**
+     * method to get the player id 
      * @return the playerID
      */
     public String getPlayerID() 
@@ -42,32 +45,10 @@ public class Player extends WarPlayer
     
     /**
      * The method to be instantiated when you subclass the Player class
-     * with your specific type of Player and filled in with logic to play your game.
+     * with your specific type of Player 
      */
-    //public abstract void play();
+    
 
-	public int numCards() {
-		// TODO - implement Player.numCards
-		throw new UnsupportedOperationException();
-                
-	}
 
-	public void collectCard() {
-		// TODO - implement Player.collectCard
-		throw new UnsupportedOperationException();
-	}
-
-	public void collectCards() {
-		// TODO - implement Player.collectCards
-		throw new UnsupportedOperationException();
-	}
-
-	public void compareCardRank() {
-            
-            
-            
-		// TODO - implement Player.compareCardRank
-		throw new UnsupportedOperationException();
-	}
 
 }
