@@ -13,23 +13,23 @@ import java.util.Collections;
  * HINT, you might want to subclass this more than once.
  * The group of cards has a maximum size attribute which is flexible for reuse.
  * @author dancye
+ * @modifield by Andrew Pereira,2020
  */
 public class GroupOfCards 
 {
    
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
-    private int size = 52;//the size of the grouping
+   //the size of the grouping
+    private int size = 52;
     private Card[] card = new Card[size];
     
+    //the cards dealed for the player one 
     private ArrayList<Card> deal1;
+     //the cards dealed for the player two
     private ArrayList<Card> deal2;
     
-    public GroupOfCards()
-    {
-      
-    }
-    
+        
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
@@ -38,38 +38,48 @@ public class GroupOfCards
     {
         return cards;
     }
-    
+    /**
+     *method to shuffle the cards 
+     */
     public void shuffle()
     {
         Collections.shuffle(cards);
     }
 
     /**
-     * @return the size of the group of cards
+     * to return the size of the group of cards
+     * @return size:int The size of the group of cards
      */
     public int getSize() {
         return size;
     }
 
     /**
+     * method to set the size for the group of cards 
      * @param givenSize the max size for the group of cards
      */
     public void setSize(int givenSize) {
         size = givenSize;
     }
+    /**
+     *method to return the cards 
+     * @return cards:ArrayList<Card> -the cards 
+     */
+    public ArrayList<Card> getCards() {
+	return this.cards;
+    }
 
-	public ArrayList<Card> getCards() {
-		return this.cards;
-	}
+    /**
+     *the method to set the values of the cards 
+     * @param cards: ArrayList<card>- the cards
+     */
+    public void setCards(ArrayList<Card> cards) {
+	this.cards = cards;
+    }
 
-	public void setCards(ArrayList<Card> cards) {
-		this.cards = cards;
-	}
-
-	public void setSize() {
-		// TODO - implement GroupOfCards.setSize
-		throw new UnsupportedOperationException();
-	}
+	/**
+         *method to create the hand 
+         */
         public void createHand() {
             int count = 0;
             cards = new ArrayList<>();
@@ -81,15 +91,22 @@ public class GroupOfCards
             }
             
         }
+        /**
+         *method to deal cards to player 1
+         *@return deal1:ArrayList<card> - the cards of the player 1*/
     public ArrayList<Card> dealPlayer1(){
-     ArrayList<Card> deal1 = new ArrayList<>();
+      deal1 = new ArrayList<>();
      for (int i = 0; i <cards.size(); i = i + 2){
          deal1.add(cards.get(i));
      }
      return deal1;
     }
+    
+    /**
+         *method to deal cards to player 2
+         *@return deal2:ArrayList<card> - the cards of the player 2*/
      public ArrayList<Card> dealPlayer2(){
-     ArrayList<Card> deal2 = new ArrayList<>();
+      deal2 = new ArrayList<>();
      for (int i = 1; i <cards.size(); i = i + 2){
          deal2.add(cards.get(i));
      }
