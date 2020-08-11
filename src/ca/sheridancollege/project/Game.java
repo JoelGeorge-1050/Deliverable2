@@ -19,7 +19,10 @@ public class Game
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
     
-    /***/
+    /**
+     *@param giveName : String - the tittle of the game 
+     *Constructor for the class initizating the data members
+     */
     public Game(String givenName)
     {
         gameName = givenName;
@@ -27,7 +30,7 @@ public class Game
     }
 
     /**
-     * @return the gameName
+     * @return gameName:String the gameName
      */
     public String getGameName() 
     {
@@ -35,7 +38,7 @@ public class Game
     }
     
      /**
-     * @return the players of this game
+     * @return player:ArrayList<Player> the players of this game
      */
     public ArrayList <Player> getPlayers() 
     {
@@ -51,22 +54,22 @@ public class Game
     }
     
     /**
-     * Play the game. This might be one method or many method calls depending
-     * on your game.
+     * Play the game. 
      */
     public void play(){
         Scanner input = new Scanner(System.in);
+                
                 ArrayList <Player> players = new ArrayList<>();
                 System.out.println("Welcome to the War Game!");
                 //input names of players
-                System.out.println("Enter your player1 ID");
+                System.out.println("Enter your player1 Name");
                 String player1 = input.nextLine();
                 players.add(new Player(player1));
-                System.out.println("Enter your player2 ID");
+                System.out.println("Enter your player2 Name");
                 String player2 = input.nextLine();
                 players.add(new Player(player2));
                 
-                System.out.println("There are " + players.size() + " in this game. Battle!");
+                System.out.println("There are " + players.size() + " Players in this game. Battle!");
                 
                 GroupOfCards cards = new GroupOfCards();
                 
@@ -81,6 +84,13 @@ public class Game
                 
              
     };
+    
+    /**
+     *@param card1: Card -the cards of player one
+     *@param card1: Card -the cards of player one
+     * the method to compare the cards of each player to determine you won the g
+     * game 
+     */
     public void compare(Card card1, Card card2) {
 
         if (card1.getValue() == card2.getValue()) {
@@ -97,22 +107,8 @@ public class Game
         }
     }
     
-    /**
-     * When the game is over, use this method to declare and display a winning
-     * player.
-     */
-   // public abstract void declareWinner();
-
-	/**
-	 * 
-	 * @param p1
-	 * @param p2
-     * @return 
-	 */
-	public int checkNumCards(Player p1, Player p2) {
-		// TODO - implement Game.checkNumCards
-		throw new UnsupportedOperationException();
-	}
+    
+	
 
    
     
